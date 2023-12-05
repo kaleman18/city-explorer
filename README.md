@@ -27,13 +27,13 @@ I used a mixture of React and MongoDB to provide this website.
 <!-- ------------------------------------------------------------------------------------------------------------------ -->
 ### Time Estimates
 
-Name of feature: ________________________________
+Name of feature: Asynchronous code, and APIs
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 3 hours
 
-Start time: _____
+Start time: 2:15
 
-Finish time: _____
+Finish time: 7:15
 
-Actual time needed to complete: _____
+Actual time needed to complete: 5 hours
 <!-- ------------------------------------------------------------------------------------------------------------------ -->
