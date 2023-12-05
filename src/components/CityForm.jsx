@@ -22,13 +22,11 @@ function CityForm(props) {
 
   return (
     <Form onSubmit= {handleSubmit}>
-      <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+      <Form.Group className="textbox" controlId="exampleForm.ControlTextarea1">
         <Form.Label ></Form.Label>
         <Form.Control type="text" placeholder="Enter Any City!" onChange = {handleChange} />
       </Form.Group>
-      <Button variant="primary" type="submit" >
-        Explore!
-      </Button>
+      <Button variant="success" type='submit'> Explore </Button>{' '}
     </Form>
   );
 }
