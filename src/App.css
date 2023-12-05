@@ -31,7 +31,7 @@ button{
     margin-top: 100px;
     text-align: center;
     border-radius: 15px;
-    background-image:url('src/assets/mage-from-rawpixel-id-12205130-jpeg.jpg');
+    background-image:url('./assets/mage-from-rawpixel-id-12205130-jpeg.jpg');
     background-position: center center;
     background-size: 750px;
 
