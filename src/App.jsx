@@ -1,9 +1,11 @@
 import {useState} from "react"
-// import Header from './components/Header.jsx'
+import Header from './components/Header.jsx'
 import CityFrom from './components/CityForm.jsx'
 import axios from "axios";
-// import Footer from './components/Footer.jsx'
+import Footer from './components/Footer.jsx'
 import Map from './components/Map.jsx'
+import './CssReset.css'
+import './App.css'
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 function App () {
@@ -26,17 +28,17 @@ function App () {
       setLatitude(response.data[0].lat)
       setLongitude(response.data[0].lon)
     } catch(error){
-      console.log(error.message)
+      alert("That didn't quite work, try again!")
     }
   }
 
 
   return(
     <>
-      {/* <Header /> */}
+      <Header />
       <CityFrom changeCity = {changeCity}/>
       <Map latitude = {latitude} longitude = {longitude} City = {City}/>
-      {/* <Footer/> */}
+      <Footer/>
     </>
   )
 
