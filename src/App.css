@@ -48,6 +48,12 @@ button{
 .cardtext {
     color: white;
 }
+.movieCard {
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+
+}
 
 /* Footer----------------------------------------------------------------------- */
 

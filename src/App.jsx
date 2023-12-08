@@ -7,9 +7,13 @@ import Map from './components/Map.jsx'
 import Weather from './components/Weather.jsx'
 import './CssReset.css'
 import './App.css'
+import Movie from "./components/Movie.jsx";
+import { Accordion } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 const API_KEY = import.meta.env.VITE_API_KEY;
+const BACKEND = import.meta.env.VITE_SERVER_KEY;
 function App() {
 
   const [City, setCity] = useState('');
@@ -20,6 +24,7 @@ function App() {
   const [dayOne, setDayOne] = useState('');
   const [dayTwo, setDayTwo] = useState('');
   const [dayThree, setDayThree] = useState('');
+  const [movieData, setMovieData] = useState('');
 
   function changeCity(newCity) {
     getLocation(newCity)
@@ -44,12 +49,13 @@ function App() {
   }
   async function getBackendMovie(city) {
     try {
-      let responseMovie = await axios.get('http://localhost:3000/movie', {
+      let responseMovie = await axios.get(`${BACKEND}/movie`, {
         params: {
           'city': city
         }
       })
-      console.log(responseMovie)
+      console.log(responseMovie.data)
+      setMovieData(responseMovie.data)
 
     }catch{
       console.log('movie API call not working')
@@ -57,7 +63,7 @@ function App() {
   }
   async function getBackendWeather(latitude, longitude) {
       try {
-        let response = await axios.get('http://localhost:3000/weather', {
+        let response = await axios.get(`${BACKEND}/weather`, {
           params: {
             "latitude": latitude,
             "longitude": longitude
@@ -81,15 +87,9 @@ function App() {
         <CityFrom changeCity={changeCity} />
         <Map latitude={latitude} longitude={longitude} City={City} />
         {dayOne && <Weather dayOne={dayOne} dayTwo={dayTwo} dayThree={dayThree} />}
+        {movieData && <Movie movieData= {movieData}/>}
         <Footer />
       </>
     )
-
-
-
   }
-
-
-
-
   export default App
