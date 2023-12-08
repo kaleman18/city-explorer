@@ -3,7 +3,7 @@ import React from "react";
 function Header(){
 
     return(
-       <h1>Movie Finder</h1>
+       <h1>City Explorer!</h1>
     )
 }
 
