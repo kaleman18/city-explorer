@@ -27,13 +27,13 @@ I used a mixture of React and MongoDB to provide this website.
 <!-- ------------------------------------------------------------------------------------------------------------------ -->
 ### Time Estimates
 
-Name of feature: APIs
+Name of feature: Refactoring into Modules
 
-Estimate of time needed to complete: 4 hours
+Estimate of time needed to complete: 3 Hours
 
 Start time: 1:15
 
-Finish time: 9:00
+Finish time: 7:30
 
-Actual time needed to complete: still ongoing
+Actual time needed to complete: 6 hours and 15 minutes
 <!-- ------------------------------------------------------------------------------------------------------------------ -->

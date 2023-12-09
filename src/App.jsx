@@ -14,6 +14,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const API_KEY = import.meta.env.VITE_API_KEY;
 const BACKEND = import.meta.env.VITE_SERVER_KEY;
+const LOCAL = import.meta.env.VITE_LOCAL;
+
 function App() {
 
   const [City, setCity] = useState('');
@@ -49,13 +51,13 @@ function App() {
   }
   async function getBackendMovie(city) {
     try {
-      let responseMovie = await axios.get(`${BACKEND}/movie`, {
+      let responseMovie = await axios.get(`${LOCAL}/movie`, {
         params: {
           'city': city
         }
       })
-      console.log(responseMovie.data)
-      setMovieData(responseMovie.data)
+      console.log(responseMovie.data.movies)
+      setMovieData(responseMovie.data.movies)
 
     }catch{
       console.log('movie API call not working')
@@ -63,7 +65,7 @@ function App() {
   }
   async function getBackendWeather(latitude, longitude) {
       try {
-        let response = await axios.get(`${BACKEND}/weather`, {
+        let response = await axios.get(`${LOCAL}/weather`, {
           params: {
             "latitude": latitude,
             "longitude": longitude
@@ -73,7 +75,7 @@ function App() {
         console.log(dayOne)
         setDayTwo(response.data.weather[1])
         setDayThree(response.data.weather[2])
-        console.log(response.data)
+        console.log(response)
         console.log(dayOne)
       } catch {
         console.log('getBackend didnt work!')
