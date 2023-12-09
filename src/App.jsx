@@ -51,7 +51,7 @@ function App() {
   }
   async function getBackendMovie(city) {
     try {
-      let responseMovie = await axios.get(`${LOCAL}/movie`, {
+      let responseMovie = await axios.get(`${BACKEND}/movie`, {
         params: {
           'city': city
         }
@@ -65,7 +65,7 @@ function App() {
   }
   async function getBackendWeather(latitude, longitude) {
       try {
-        let response = await axios.get(`${LOCAL}/weather`, {
+        let response = await axios.get(`${BACKEND}/weather`, {
           params: {
             "latitude": latitude,
             "longitude": longitude
